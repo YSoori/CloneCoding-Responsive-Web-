@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+body {
+  width: screen 100%;
+}
+
+header {
+  width: screen 100%;
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5px;
+}
+nav > a > i,
+nav > ul > li {
+  margin: 15px 3px;
+}
+nav > a span,
+nav > ul i {
+  color: white;
+  font-weight: bold;
+}
+nav > a > i {
+  color: red;
+}
+nav > ul {
+  display: flex;
+}
+
+/* main */
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+.video_s {
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 4;
+  background-color: black;
+  max-height: 400px;
+}
+.video_r {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-height: 400px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.video_r iframe,
+.video_r object,
+.video_r embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 400px;
+  height: 100%;
+}
+
+.videoInfo {
+  margin: 5px 10px;
+}
+.tag a {
+  color: blue;
+  font-size: 14px;
+}
+.mainInfo {
+  position: relative;
+}
+.mainInfo > .mainText.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.mainInfo > .mainText {
+  font-size: 18px;
+  width: 95%;
+}
+.mainInfo > .down.clicked {
+  transform: rotate(180deg);
+}
+.down {
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  display: inline-block;
+  cursor: pointer;
+}
+.mainInfo > span {
+  font-size: 12px;
+  color: gray;
+  margin-right: 1px;
+}
+
+.tools {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gainsboro;
+  padding: 10px 0;
+}
+.tools li {
+  cursor: pointer;
+}
+.tools > li > div {
+  text-align: center;
+}
+.toolsImg {
+  font-size: 20px;
+}
+.tools > li:hover > div > .toolsImg {
+  color: tomato;
+}
+.toolsInfo {
+  font-size: 13px;
+}
+.accout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+}
+
+.user {
+  display: flex;
+}
+.user > span {
+  font-size: 30px;
+}
+.subscriber {
+  font-size: 12px;
+  margin-left: 5px;
+  color: grey;
+}
+
+.otherVideo {
+  height: 100%;
+  margin: 10px 10px;
+}
+.otherVideo > div {
+  font-size: 12px;
+  color: gray;
+}
+
+.ovlI {
+  width: 90px;
+  height: 90px;
+  background-color: gold;
+}
+
+.otherVideo > a {
+  display: flex;
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .video_r {
+    padding: 0;
+    height: 400px;
+  }
+  .videoInfo,
+  .otherVideo {
+    flex: 1;
+  }
+}
